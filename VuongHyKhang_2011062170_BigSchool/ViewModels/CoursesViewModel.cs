@@ -8,8 +8,10 @@ using VuongHyKhang_2011062170_BigSchool.Models;
 
 namespace VuongHyKhang_2011062170_BigSchool.ViewModels
 {
-    public class CourseViewModel
+    public class CoursesViewModel
     {
+        public IEnumerable<Course> UpcommingCourses { get; set; }
+        public bool ShowAction { get; set; }
         [Required]
         public string Place { get; set; }
 

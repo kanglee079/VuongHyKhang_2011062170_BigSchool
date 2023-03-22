@@ -20,7 +20,7 @@ namespace VuongHyKhang_2011062170_BigSchool.Controllers
         [Authorize]
         public ActionResult Create()
         {
-            var viewModel = new CourseViewModel
+            var viewModel = new CoursesViewModel
             {
                 Categories = _dbContext.Categories.ToList()
             };
@@ -30,7 +30,7 @@ namespace VuongHyKhang_2011062170_BigSchool.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CourseViewModel viewModel)
+        public ActionResult Create(CoursesViewModel viewModel)
         {
             if (!ModelState.IsValid)
             {
